@@ -9,7 +9,7 @@ resnet18 = models.resnet18(pretrained=True)
 alexnet = models.alexnet(pretrained=True)
 vgg16 = models.vgg16(pretrained=True)
 
-models = {'resnet': resnet18, 'alexnet': alexnet, 'vgg': vgg16}
+models = {'alexnet': alexnet, 'resnet': resnet18, 'vgg': vgg16}
 
 # obtain ImageNet labels
 with open('imagenet1000_clsid_to_human.txt') as imagenet_classes_file:

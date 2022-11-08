@@ -3,7 +3,7 @@
 # */AIPND-revision/intropyproject-classify-pet-images/get_pet_labels.py
 #                                                                             
 # PROGRAMMER: Muhammad Aris Septanugroho
-# DATE CREATED: 29/09/2022                                  
+# DATE CREATED: 28/11/2022                           
 # REVISED DATE: 
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
@@ -42,14 +42,13 @@ def get_pet_labels(image_dir):
     """
     results_dic = {}
     filenames = listdir(image_dir)
-    for fn in filenames:
-        if fn.startswith("."):
+    for my_file in filenames:
+        if my_file.startswith("."):
             continue
-        v = fn.split("_")
+        v = my_file.split("_")
         v = [e.lower() for e in v if e.isalpha()]
         v = " ".join(v)
-        results_dic[fn] = [v]
-    # Replace None with the results_dic dictionary that you created with this
-    # function
+        results_dic[my_file] = [v]
+    # Replace None with the results_dic dictionary that you created with this function
     
     return results_dic
