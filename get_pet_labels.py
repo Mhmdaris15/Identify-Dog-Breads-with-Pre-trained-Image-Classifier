@@ -41,14 +41,14 @@ def get_pet_labels(image_dir):
          index 0 = pet image label (string)
     """
     results_dic = {}
-    filenames = listdir(image_dir)
-    for my_file in filenames:
+    file_names = listdir(image_dir)
+    for my_file in file_names:
         if my_file.startswith("."):
             continue
-        v = my_file.split("_")
-        v = [e.lower() for e in v if e.isalpha()]
-        v = " ".join(v)
-        results_dic[my_file] = [v]
+        temporary = my_file.split("_")
+        temporary = [e.lower() for e in temporary if e.isalpha()]
+        temporary = " ".join(temporary)
+        results_dic[my_file] = [temporary]
     # Replace None with the results_dic dictionary that you created with this function
     
     return results_dic
